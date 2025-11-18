@@ -14,6 +14,11 @@
 
 int	ft_printf_string(char *s, int fd)
 {
+	if (!s)
+	{
+		ft_putstr_fd("(null)", fd);
+		return (6);
+	}
 	ft_putstr_fd(s, fd);
 	return (ft_strlen(s));
 }

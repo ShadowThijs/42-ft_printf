@@ -79,25 +79,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (ret);
 }
-
-int main (void)
-{
-	int nbr = 1234321;
-	char c = 'c';
-	char *str = "String";
-	void *ptr;
-	ft_printf("test 1: %d %i\n", nbr, nbr);
-	printf("test 1: %d %i\n", nbr, nbr);
-
-	ft_printf("test 2: %c %c\n", c, c);
-	printf("test 2: %c %c\n", c, c);
-
-	ft_printf("test 3: %s %s\n", str, str);
-	printf("test 3: %s %s\n", str, str);
-
-	ft_printf("test 4: %x %X\n", nbr, nbr);
-	printf("test 4: %x %X\n", nbr, nbr);
-
-	ft_printf("test 5: %p %p\n", ptr, ptr);
-	printf("test 5: %p %p\n", ptr, ptr);
-}
