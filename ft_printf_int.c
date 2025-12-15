@@ -12,8 +12,28 @@
 
 #include "libft/libft.h"
 
+static int	ft_intlen(long n)
+{
+	int	len;
+
+	len = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		len++;
+		n = -n;
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
 int	ft_printf_int(int n, int fd)
 {
 	ft_putnbr_fd(n, fd);
-	return (ft_strlen(ft_itoa(n)));
+	return (ft_intlen(n));
 }
