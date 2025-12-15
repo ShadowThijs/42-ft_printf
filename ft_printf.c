@@ -67,7 +67,9 @@ int	ft_printf(const char *s, ...)
 {
 	va_list	args;
 	int		ret;
-
+	
+	if (!s)
+		return (0);
 	va_start(args, s);
 	ret = 0;
 	ft_print_to_perc(s, &ret, &args);
